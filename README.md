@@ -1,7 +1,6 @@
 # Search Console Pro
 
-![Search Console Pro Logo](path/to/logo.png)
-
+![Search Console Pro Logo](docs/images/marquee_promo_tile.png)
 Search Console Pro is a powerful Chrome extension that enhances your Google search experience with a terminal-like interface. It combines the efficiency of a command-line interface with the power of Google search, allowing you to quickly find the information you need.
 
 ## Features
