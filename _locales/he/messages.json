@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "Search Console Pro",
+    "description": "שם ההרחבה"
+  },
+  "extensionDescription": {
+    "message": "חיפוש Google בסגנון טרמינל עם תכונות מתקדמות",
+    "description": "תיאור ההרחבה"
+  },
+  "openSearchTerminal": {
+    "message": "פתח את הטרמינל לחיפוש",
+    "description": "תיאור קיצור המקלדת לפתיחת מסוף החיפוש"
+  }
+}

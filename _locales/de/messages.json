@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "Suchkonsole Pro",
+    "description": "Der Name der Erweiterung"
+  },
+  "extensionDescription": {
+    "message": "Terminal-ähnliche Google-Suche mit erweiterten Funktionen",
+    "description": "Die Beschreibung der Erweiterung"
+  },
+  "openSearchTerminal": {
+    "message": "Suchkonsole öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen der Suchkonsole"
+  }
+}

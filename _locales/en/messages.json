@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "Search Console Pro",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Terminal-like Google search with advanced features",
+    "description": "The description of the extension"
+  },
+  "openSearchTerminal": {
+    "message": "Open the search terminal",
+    "description": "Description of the keyboard shortcut to open the search terminal"
+  }
+}

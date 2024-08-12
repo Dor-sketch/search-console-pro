@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "Console de Recherche Pro",
+    "description": "Le nom de l'extension"
+  },
+  "extensionDescription": {
+    "message": "Recherche Google de type terminal avec fonctionnalités avancées",
+    "description": "La description de l'extension"
+  },
+  "openSearchTerminal": {
+    "message": "Ouvrir le terminal de recherche",
+    "description": "Description du raccourci clavier pour ouvrir le terminal de recherche"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "検索コンソール Pro",
+    "description": "拡張機能の名前"
+  },
+  "extensionDescription": {
+    "message": "高度な機能を備えたターミナル風Google検索",
+    "description": "拡張機能の説明"
+  },
+  "openSearchTerminal": {
+    "message": "検索ターミナルを開く",
+    "description": "検索ターミナルを開くキーボードショートカットの説明"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "搜索控制台专业版",
+    "description": "扩展的名称"
+  },
+  "extensionDescription": {
+    "message": "具有高级功能的终端式谷歌搜索",
+    "description": "扩展的描述"
+  },
+  "openSearchTerminal": {
+    "message": "打开搜索终端",
+    "description": "打开搜索终端的键盘快捷键描述"
+  }
+}

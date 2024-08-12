@@ -1,8 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "Search Console Pro",
+  "name": "__MSG_extensionName__",
   "version": "1.0",
-  "description": "Terminal-like Google search with advanced features",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+  "license": "MIT",
   "permissions": [
     "storage",
     "activeTab"
@@ -25,20 +27,20 @@
       "js": ["content.js"]
     }
   ],
-    "icons": {
-        "16": "icons/icon16.png",
-        "48": "icons/icon48.png",
-        "128": "icons/icon128.png",
-        "256": "icons/icon256.png"
-    },
-      "options_page": "options.html",
-        "commands": {
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png",
+    "256": "icons/icon256.png"
+  },
+  "options_page": "options.html",
+  "commands": {
     "_execute_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+F",
         "mac": "MacCtrl+Shift+F"
       },
-      "description": "Open the search terminal"
+      "description": "__MSG_openSearchTerminal__"
     }
   }
 }
