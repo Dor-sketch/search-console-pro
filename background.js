@@ -23,3 +23,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     });
   }
 });
+
+// Listen for the command to open the popup
+chrome.commands.onCommand.addListener((command) => {
+  if (command === "_execute_action") {
+    chrome.action.openPopup();
+  }
+});
