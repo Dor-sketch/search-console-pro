@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Google Search Terminal</title>
+  <title>Search Console Pro</title>
   <style>
     body {
-      width: 400px;
-      height: 300px;
+      width: 500px;
+      height: 400px;
       font-family: monospace;
       background-color: #000;
       color: #0f0;
@@ -13,7 +13,7 @@
       margin: 0;
     }
     #terminal {
-      height: 250px;
+      height: 350px;
       overflow-y: auto;
       margin-bottom: 10px;
     }
@@ -35,6 +35,14 @@
     #input:focus {
       outline: none;
     }
+    #autocomplete {
+      color: #0f0;
+      opacity: 0.5;
+    }
+    .highlight {
+      background-color: #0f0;
+      color: #000;
+    }
   </style>
 </head>
 <body>
@@ -42,6 +50,7 @@
   <div id="input-line">
     <span id="prompt">&gt;</span>
     <input type="text" id="input" autofocus>
+    <span id="autocomplete"></span>
   </div>
   <script src="popup.js"></script>
 </body>
