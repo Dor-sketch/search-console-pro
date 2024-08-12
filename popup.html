@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Search Terminal</title>
+  <style>
+    body {
+      width: 400px;
+      height: 300px;
+      font-family: monospace;
+      background-color: #000;
+      color: #0f0;
+      padding: 10px;
+      margin: 0;
+    }
+    #terminal {
+      height: 250px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+    #input-line {
+      display: flex;
+      align-items: center;
+    }
+    #prompt {
+      margin-right: 5px;
+    }
+    #input {
+      flex-grow: 1;
+      background-color: transparent;
+      border: none;
+      color: #0f0;
+      font-family: monospace;
+      font-size: 14px;
+    }
+    #input:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal"></div>
+  <div id="input-line">
+    <span id="prompt">&gt;</span>
+    <input type="text" id="input" autofocus>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

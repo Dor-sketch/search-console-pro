@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Google Search Terminal",
+  "version": "3.0",
+  "description": "Terminal-like Google search with history navigation",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
