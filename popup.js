@@ -4,6 +4,8 @@ let currentHistoryIndex = -1;
 let autoCompleteIndex = -1;
 let ctrlRMode = false;
 let ctrlRSearch = '';
+let ctrlRMatches = [];
+let ctrlRMatchIndex = -1;
 let username = 'user';
 let theme = 'dark';
 let showHeader = true;
@@ -41,13 +43,45 @@ function renderAutocomplete(suggestion) {
 function enterCtrlRMode() {
   ctrlRMode = true;
   ctrlRSearch = '';
-  updateTerminal('(reverse-i-search)``: ', false);
+  ctrlRMatches = [];
+  ctrlRMatchIndex = -1;
+  updateCtrlRDisplay();
 }
 
-function updateCtrlRSearch() {
-  const terminal = document.getElementById('terminal');
-  const lastLine = terminal.lastChild;
-  lastLine.innerHTML = `(reverse-i-search)\`${ctrlRSearch}\`: ${searchHistory.find(h => h.toLowerCase().includes(ctrlRSearch.toLowerCase())) || ''}`;
+function updateCtrlRDisplay() {
+  const ctrlRElement = document.getElementById('ctrl-r-display');
+  ctrlRElement.textContent = `(reverse-i-search)\`${ctrlRSearch}\`: ${ctrlRMatches[ctrlRMatchIndex] || ''}`;
+  ctrlRElement.style.display = ctrlRMode ? 'block' : 'none';
+}
+
+function handleCtrlRInput(e) {
+  if (e.key === 'r' && e.ctrlKey) {
+    e.preventDefault();
+    if (ctrlRMatches.length > 0) {
+      ctrlRMatchIndex = (ctrlRMatchIndex + 1) % ctrlRMatches.length;
+      input.value = ctrlRMatches[ctrlRMatchIndex];
+    }
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    exitCtrlRMode();
+  } else if (e.key === 'Escape') {
+    e.preventDefault();
+    exitCtrlRMode();
+    input.value = '';
+  } else if (e.key.length === 1) {
+    ctrlRSearch += e.key;
+    ctrlRMatches = searchHistory.filter(h => h.toLowerCase().includes(ctrlRSearch.toLowerCase()));
+    ctrlRMatchIndex = ctrlRMatches.length > 0 ? 0 : -1;
+    if (ctrlRMatches.length > 0) {
+      input.value = ctrlRMatches[ctrlRMatchIndex];
+    }
+  }
+  updateCtrlRDisplay();
+}
+
+function exitCtrlRMode() {
+  ctrlRMode = false;
+  updateCtrlRDisplay();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -73,27 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   input.addEventListener('keydown', function(e) {
     if (ctrlRMode) {
-      if (e.key === 'r' && e.ctrlKey) {
-        e.preventDefault();
-        const matches = searchHistory.filter(h => h.toLowerCase().includes(ctrlRSearch.toLowerCase()));
-        if (matches.length > 0) {
-          currentHistoryIndex = (currentHistoryIndex + 1) % matches.length;
-          updateCtrlRSearch();
-        }
-      } else if (e.key === 'Enter') {
-        e.preventDefault();
-        ctrlRMode = false;
-        input.value = searchHistory.find(h => h.toLowerCase().includes(ctrlRSearch.toLowerCase())) || '';
-        updateTerminal(input.value);
-      } else if (e.key === 'Escape') {
-        e.preventDefault();
-        ctrlRMode = false;
-        input.value = '';
-        updateTerminal('');
-      } else if (e.key.length === 1) {
-        ctrlRSearch += e.key;
-        updateCtrlRSearch();
-      }
+      handleCtrlRInput(e);
       return;
     }
 

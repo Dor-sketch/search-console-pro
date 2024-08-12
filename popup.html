@@ -53,6 +53,10 @@
     #autocomplete {
       opacity: 0.5;
     }
+    #ctrl-r-display {
+      margin-bottom: 5px;
+      font-style: italic;
+    }
     .dark {
       background-color: #1e1e1e;
       color: #fff;
@@ -92,7 +96,6 @@
     .classic #terminal-content {
       height: 100%;
     }
-
   </style>
 </head>
 <body>
@@ -104,6 +107,7 @@
     </div>
     <div id="terminal-content">
       <div id="terminal"></div>
+      <div id="ctrl-r-display" style="display: none;"></div>
       <div id="input-line">
         <span id="prompt"></span>
         <input type="text" id="input" autofocus>
