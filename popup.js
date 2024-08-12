@@ -88,6 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const input = document.getElementById('input');
   const prompt = document.getElementById('prompt');
   const terminalHeader = document.getElementById('terminal-header');
+  const terminalContent = document.getElementById('terminal-content');
+  const closeButton = document.getElementById('close-button');
+  const minimizeButton = document.getElementById('minimize-button');
+  const maximizeButton = document.getElementById('maximize-button');
 
   chrome.storage.local.get(['searchHistory', 'terminalHistory', 'username', 'theme', 'showHeader'], function(data) {
     searchHistory = data.searchHistory || [];
@@ -103,6 +107,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const terminal = document.getElementById('terminal');
     terminal.innerHTML = terminalHistory.join('<br>');
     terminal.scrollTop = terminal.scrollHeight;
+  });
+
+  // Close button functionality
+  closeButton.addEventListener('click', function() {
+    window.close();
+  });
+
+  // Minimize button functionality
+  minimizeButton.addEventListener('click', function() {
+    terminalContent.classList.toggle('minimized');
+  });
+
+  // Maximize button functionality
+  maximizeButton.addEventListener('click', function() {
+    document.body.classList.toggle('maximized');
   });
 
   input.addEventListener('keydown', function(e) {

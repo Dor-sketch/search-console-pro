@@ -9,6 +9,7 @@
       font-family: 'Menlo', monospace;
       margin: 0;
       padding: 0;
+      transition: all 0.3s ease;
     }
     #terminal-container {
       width: 100%;
@@ -27,11 +28,13 @@
       height: 12px;
       border-radius: 50%;
       margin-right: 8px;
+      cursor: pointer;
     }
     #terminal-content {
       height: calc(100% - 25px);
       padding: 10px;
       overflow-y: auto;
+      transition: all 0.3s ease;
     }
     #input-line {
       display: flex;
@@ -96,14 +99,21 @@
     .classic #terminal-content {
       height: 100%;
     }
+    .minimized {
+      height: 25px !important;
+    }
+    .maximized {
+      width: 800px !important;
+      height: 600px !important;
+    }
   </style>
 </head>
 <body>
   <div id="terminal-container">
     <div id="terminal-header">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span id="close-button"></span>
+      <span id="minimize-button"></span>
+      <span id="maximize-button"></span>
     </div>
     <div id="terminal-content">
       <div id="terminal"></div>

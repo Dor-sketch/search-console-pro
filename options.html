@@ -30,6 +30,12 @@
       margin: 4px 2px;
       cursor: pointer;
     }
+    .shortcut-info {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -51,6 +57,19 @@
     Show terminal header
   </label>
   <button id="save">Save</button>
+
+  <div class="shortcut-info">
+    <h2>Keyboard Shortcut</h2>
+    <p>Current shortcut: <span id="currentShortcut">Ctrl+Shift+F</span></p>
+    <p>To change the keyboard shortcut:</p>
+    <ol>
+      <li>Click the button below to open the Chrome extensions shortcut page</li>
+      <li>Find "Search Console Pro" in the list</li>
+      <li>Click on the shortcut field and press your desired key combination</li>
+    </ol>
+    <button id="openShortcutPage">Open Shortcut Page</button>
+  </div>
+
   <script src="options.js"></script>
 </body>
 </html>
