@@ -22,7 +22,7 @@
     <meta property="twitter:url" content="https://dorpascal.com/search-console-pro/">
     <meta property="twitter:title" content="Search Console Pro - Powerful Terminal-like Google Search">
     <meta property="twitter:description" content="Enhance your Google searches with a terminal-like interface. Features include search history, autocomplete, and customizable themes.">
-    <meta property="twitter:image" content="https://dorpascal.com/search-console-pro/images/promo-image-with-text.jpg"">
+    <meta property="twitter:image" content="https://dorpascal.com/search-console-pro/images/promo-image-with-text.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/icon256.png">
@@ -41,13 +41,13 @@
       "name": "Search Console Pro",
       "operatingSystem": "Chrome",
       "applicationCategory": "BrowserApplication",
-    "license": "https://opensource.org/licenses/MIT",
-         "offers": {
+      "license": "https://opensource.org/licenses/MIT",
+      "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
       },
-      "downloadUrl": "https://chromewebstore.google.com/detail/fjdfipgcgcclfndccaijkonipfndihco/",
+      "downloadUrl": "https://chromewebstore.google.com/detail/fjdfipgcgcclfndccaijkonipfndihco",
       "description": "Search Console Pro is a Chrome extension that provides a powerful, terminal-like interface for your Google searches, combining efficiency with advanced features.",
       "screenshot": [
         "https://dorpascal.com/search-console-pro/images/screenshot1.png",
@@ -67,73 +67,96 @@
         "name": "Dor Pascal"
       },
       "softwareVersion": "1.0.0",
-        "datePublished": "2024-08-12T00:00:00Z",
-          "applicationSubCategory": "ProductivityApplication",
+      "datePublished": "2024-08-12T00:00:00Z",
+      "applicationSubCategory": "ProductivityApplication",
       "browserRequirements": "Google Chrome"
     }
     </script>
     <style>
+        :root {
+            --bg-color: #1e1e1e;
+            --text-color: #fff;
+            --accent-color: #4CAF50;
+            --section-bg: #2c2c2c;
+            --code-bg: #3c3c3c;
+            --border-color: #3c3c3c;
+        }
+
         body {
             font-family: 'Menlo', monospace;
             line-height: 1.6;
-            color: #fff;
+            color: var(--text-color);
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #1e1e1e;
+            background-color: var(--bg-color);
         }
+
         header {
             text-align: center;
             padding: 1rem;
-            border-bottom: 2px solid #3c3c3c;
+            border-bottom: 2px solid var(--border-color);
         }
+
         h1 {
             margin-bottom: 0;
+            font-size: 2rem;
         }
+
         .subtitle {
             font-style: italic;
             margin-top: 0.5rem;
-            color: #4CAF50;
+            color: var(--accent-color);
+            font-size: 1rem;
         }
+
         section {
-            background-color: #2c2c2c;
+            background-color: var(--section-bg);
             margin: 20px 0;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
+
         h2 {
-            color: #4CAF50;
-            border-bottom: 2px solid #4CAF50;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 10px;
+            font-size: 1.5rem;
         }
+
         code {
-            background-color: #3c3c3c;
+            background-color: var(--code-bg);
             padding: 2px 4px;
             border-radius: 4px;
             font-family: 'Menlo', monospace;
         }
+
         ul, ol {
             padding-left: 20px;
         }
+
         .footer {
             text-align: center;
             margin-top: 20px;
             font-size: 0.9rem;
             color: #888;
-            border-top: 2px solid #3c3c3c;
+            border-top: 2px solid var(--border-color);
             padding-top: 20px;
         }
+
         a {
-            color: #4CAF50;
+            color: var(--accent-color);
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .button {
             display: inline-block;
-            background-color: #4CAF50;
+            background-color: var(--accent-color);
             color: white;
             padding: 10px 20px;
             text-align: center;
@@ -142,19 +165,48 @@
             margin-top: 10px;
             transition: background-color 0.3s;
         }
+
         .button:hover {
             background-color: #45a049;
             text-decoration: none;
         }
+
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            .button {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
     <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T7HFKFX0PR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-T7HFKFX0PR');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7HFKFX0PR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T7HFKFX0PR');
+    </script>
 </head>
 <body>
     <header>
@@ -165,7 +217,7 @@
     <section>
         <h2>About</h2>
         <p>Search Console Pro is a Chrome extension that provides a powerful, terminal-like interface for your Google searches. It combines the efficiency of a command-line interface with the power of Google search, allowing you to quickly find the information you need.</p>
-        <a href="https://chromewebstore.google.com/detail/fjdfipgcgcclfndccaijkonipfndihco/" class="button">Install Search Console Pro (Soon at Chrome Web Store)</a>
+        <a href="https://chromewebstore.google.com/detail/fjdfipgcgcclfndccaijkonipfndihco" class="button">Install Search Console Pro (It's Free!)</a>
     </section>
 
     <section>
