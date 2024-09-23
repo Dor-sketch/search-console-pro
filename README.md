@@ -1,6 +1,12 @@
 # Search Console Pro
 
 ![Search Console Pro Logo](docs/images/marquee_promo_tile.png)
+
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/fjdfipgcgcclfndccaijkonipfndihco?label=Chrome%20Web%20Store)](https://chrome.google.com/webstore/detail/search-console-pro/fjdfipgcgcclfndccaijkonipfndihco)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/users/fjdfipgcgcclfndccaijkonipfndihco?label=Users)](https://chrome.google.com/webstore/detail/search-console-pro/fjdfipgcgcclfndccaijkonipfndihco)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/fjdfipgcgcclfndccaijkonipfndihco?label=Rating)](https://chrome.google.com/webstore/detail/search-console-pro/fjdfipgcgcclfndccaijkonipfndihco)
+[![GitHub](https://img.shields.io/github/license/Dor-sketch/search-console-pro)](LICENSE)
+
 Search Console Pro is a powerful Chrome extension that enhances your Google search experience with a terminal-like interface. It combines the efficiency of a command-line interface with the power of Google search, allowing you to quickly find the information you need.
 
 ## Features
@@ -17,7 +23,7 @@ Search Console Pro is a powerful Chrome extension that enhances your Google sear
 
 ### From Chrome Web Store
 
-1. Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/search-console-pro/your-extension-id)
+1. Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/search-console-pro/fjdfipgcgcclfndccaijkonipfndihco)
 2. Click "Add to Chrome"
 3. Confirm the installation when prompted
 
